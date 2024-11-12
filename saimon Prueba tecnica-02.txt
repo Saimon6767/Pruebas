@@ -12,6 +12,7 @@ class Program
         public void MostrarInfo()
         {
             Console.WriteLine($"Nombre: {Nombre}");
+        
             Console.WriteLine("Edad:" +Edad);
         }
     }
@@ -79,6 +80,7 @@ class Program
         public void MostrarInfoasignatura333()
         {
             Console.WriteLine($"Nombre de la asignatura: {Nombreasignatura3}");
+            
             Console.WriteLine("Calificacion:" + Calificacion2);
 
 
@@ -99,6 +101,7 @@ class Program
         public void MostrarInfoasignatura1()
         {
             Console.WriteLine($"Nombre de la asignatura: {Nombreasignatura1}");
+            
             Console.WriteLine("Calificacion:" + Calificacion1);
 
         
@@ -154,18 +157,9 @@ class Program
         Console.WriteLine("Deseas ver los datos de los estudiantes? 1=si 2=no");
         int st = Convert.ToInt32(Console.ReadLine());
 
-        if (st == 1) {
 
-            Console.WriteLine("Este es el estudiante 1");
-            estudiante.MostrarInfo();
 
-                Console.WriteLine("Este es el estudiante 2");
-                estudiante2.MostrarInfo2();
-          
 
-        }
-
-            else if (st == 2) { Console.WriteLine("No se mostraran datos de los estudiantes aun, ahora hay que agregar las notas"); }
         Asignatura1 asignatura1 = new Asignatura1();
         Asignatura2 asignatura2 = new Asignatura2();
         Asignatura3 asignatura3 = new Asignatura3();
@@ -208,8 +202,11 @@ class Program
         asignatura3.MostrarInfoasignatura33();
         Console.WriteLine($"Nombre del estudiante:  {estudiante.Nombre} ");
         Console.WriteLine($"Edad del estudiante:  {estudiante.Edad} ");
+        double calif1 = asignatura1.Calificacion1 + asignatura2.Calificacion1 + asignatura3.Calificacion1 / 3;
+        Console.WriteLine($"promedio de calificaciones es: "+calif1);
         Console.WriteLine($"");
         Console.WriteLine($"");
+
      
 
 
@@ -221,6 +218,7 @@ class Program
         asignatura3.MostrarInfoasignatura333();
         Console.WriteLine($"Nombre del estudiante:  {estudiante2.Nombre} ");
         Console.WriteLine($"Edad del estudiante:  {estudiante2.Edad} ");
-
+        double calif2 = asignatura1.Calificacion2 + asignatura2.Calificacion2 + asignatura3.Calificacion2 / 3;
+        Console.WriteLine($"ppromedio de calificaciones es: " + calif2);
     }
 }
